@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
+<head th:replace="fragments :: html_head">
+</head>
+<body>
+<div class="container-fluid my-5">
+    <div th:replace="fragments :: menu">
+    </div>
+    <div class="my-5">
+        <h2 class="text-center"> Manage Users</h2>
+        <a th:href="@{/users/new}" class="btn button text-white p-2" role="button">Create new user</a>
+    </div>
+    <!-- Flash message -->
+    <div th:if="${message != null}"  class="alert alert-success text-center text-secondary" th:text="${message}">
+    </div>
+    <!-- Table of all users -->
+    <div class="listUser">
+        <table class="table table-bordered table-striped table-hover table-responsive-xl">
+            <thead>
+                <tr>
+                    <th> User ID</th>
+                    <th> Photos</th>
+                    <th>E-mail</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Roles</th>
+                    <th>Enable</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="user : ${listUsers}">
+                    <td>[[${user.id}]]</td>
+                    <td></td>
+                    <td>[[${user.email}]]</td>
+                    <td>[[${user.firstname}]]</td>
+                    <td>[[${user.lastname}]]</td>
+                    <td>[[${user.roles}]]</td>
+                    <td>[[${user.enable}]]</td>
+                    <td>
+                        Edit
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div th:replace="fragments :: footer">
+    </div>
+</div>
+</body>
+</html>

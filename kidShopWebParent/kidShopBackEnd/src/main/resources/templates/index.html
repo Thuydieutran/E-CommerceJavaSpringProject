@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Kid Shop Admin Control Panel</title>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: html_head">
 </head>
 <body>
-  <h1> Welcome to Kid Shop Admin Control Panel</h1>
+<div class="container-fluid my-5">
+    <div th:replace="fragments :: menu">
+    </div>
+    <div>
+        <h1 class="text-center"> Kid Shop Admin Control Panel</h1>
+    </div>
+    <div th:replace="fragments :: footer">
+    </div>
+</div>
+
 </body>
 </html>

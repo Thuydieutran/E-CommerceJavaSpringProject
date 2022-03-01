@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Space+Mono:ital,wght@1,700&display=swap");
+.bg-primary {
+  background-color: #FFBFCB !important; }
+
+.bg-secondary {
+  background-color: #8C92AC !important;
+  color: #FFBFCB !important; }
+
+.text-pink {
+  color: #ff6582 !important; }
+
+.text-secondary {
+  color: #8C92AC !important; }
+
+body {
+  background-color: #FFFFFF !important;
+  font-family: "Rancho", cursive;
+  color: #8C92AC !important;
+  font-size: 24px;
+  padding-top: 10px; }
+
+h1 {
+  font-family: "Space Mono", monospace;
+  font-weight: 800; }
+
+h2, h3 {
+  font-family: "Kaushan Script", cursive; }
+
+.button {
+  background-color: #ff6582 !important;
+  font-size: 20px;
+  color: #FFFFFF !important; }
+
+.button-alert {
+  font-size: 20px;
+  color: #FFFFFF !important; }
+
+table {
+  color: #8C92AC !important; }
+  table thead {
+    background-color: #8C92AC !important;
+    color: #FFFFFF !important; }
+
+.form {
+  border-radius: 20px;
+  border-color: #8C92AC !important;
+  mso-border-shadow: yes;
+  background-color: #FFDBE3 !important; }
+
+input[type="text"], input[type="email"] {
+  color: #8C92AC !important;
+  font-size: 24px; }
+
+/*# sourceMappingURL=style.css.map */

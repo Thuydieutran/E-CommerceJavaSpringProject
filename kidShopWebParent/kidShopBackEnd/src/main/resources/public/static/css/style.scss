@@ -1,0 +1,73 @@
+@import 'variables.scss';
+@import 'user.scss';
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Space+Mono:ital,wght@1,700&display=swap');
+
+.bg-primary {
+  background-color: $primary;
+}
+
+.bg-secondary {
+  background-color: $secondary;
+  color: $primary;
+}
+
+.text-pink {
+  color: $darkpink;
+}
+
+.text-secondary {
+  color: $secondary;
+}
+
+body {
+  background-color: $light;
+  font-family: $text-font;
+  color: $secondary;
+  font-size: $text-size;
+  padding-top: $padding;
+}
+
+h1 {
+  font-family: $font-title;
+  font-weight: 800;
+}
+
+h2, h3{
+  font-family: $font-subtitle;
+}
+
+.navbar {
+}
+
+.button {
+  background-color: $darkpink;
+  font-size: $text-size/1.2;
+  color: $light;
+}
+
+.button-alert {
+  font-size: $text-size/1.2;
+  color: $light;
+}
+
+table {
+  color: $secondary;
+  thead {
+    background-color: $secondary;
+    color: $light;
+  }
+}
+
+.form {
+  border-radius: 20px;
+  border-color: $secondary;
+  mso-border-shadow: yes;
+  background-color: $intermediary-light;
+}
+
+input[type="text"], input[type="email"] {
+  color: $secondary;
+  font-size: $text-size;
+}
+
