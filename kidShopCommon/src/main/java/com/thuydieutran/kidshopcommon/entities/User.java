@@ -127,4 +127,13 @@ public class User {
                 ", roles=" + roles +
                 '}';
     }
+
+    // This annotation is used to indicate that this getter is not mapped to any field in the database
+    @Transient
+    public String getPhotosImagePath() {
+        if (id == null || photos == null) return "/static/images/defaultuser.png";
+
+        return "/users-photos/" + this.id + "/" + this.photos;
+    }
+
 }

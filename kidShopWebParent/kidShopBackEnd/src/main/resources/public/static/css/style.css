@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Space+Mono:ital,wght@1,700&display=swap");
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"');
+#modalDialog button {
+  font-size: 24px; }
+
 .bg-primary {
   background-color: #FFBFCB !important; }
 

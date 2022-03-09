@@ -3,11 +3,14 @@
 <head th:fragment="html_head">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Home - Kid Shop Admin</title>
+    <title>[[${pageTitle}]]</title>
     <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/static/fontawesome/all.css}" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
     <link th:href="@{/static/css/style.css}" rel="stylesheet"/>
     <script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
     <script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
 </head>
 <body>
     <div th:fragment="menu" class="bg-primary">
@@ -59,7 +62,7 @@
             </div>
         </nav>
     </div>
-    <div class=" h-auto p-3 bg-secondary" th:fragment="footer">
+    <div class=" h-auto p-3 bg-secondary my-5" th:fragment="footer">
         <p class="text-end"> Kid Shop Control Panel - Copyright &copy; KidShop</p>
     </div>
 
