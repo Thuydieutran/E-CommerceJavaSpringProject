@@ -1,19 +1,28 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head th:fragment="html_head">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:xmls="http://www.w3.org/1999/xhtml"
+      xmls:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head th:fragment="page_head(title)">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>[[${pageTitle}]]</title>
+    <title>[[${title}]]</title>
     <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
     <link rel="stylesheet" type="text/css" th:href="@{/static/fontawesome/all.css}" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
-    <link th:href="@{/static/css/style.css}" rel="stylesheet"/>
+    <link rel="stylesheet" th:href="@{/static/css/style.css}" />
     <script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
     <script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/static/js/common.js}"></script>
 
 </head>
 <body>
+
+    <!-- Navbar -->
     <div th:fragment="menu" class="bg-primary">
+        <!-- Hidden form submit for logout -->
+        <form th:action="@{/logout}" method="post" hidden="true" name="logoutForm">
+            <input type="submit" />
+        </form>
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand ms-5" th:href="@{/}">
                 <img th:src="@{/static/images/babylogofree.png}" th:width="60" th:height="60" class="border bg-light rounded-circle me-3">
@@ -56,15 +65,26 @@
                     <li class="nav-item">
                         <a class="nav-link " th:href="@{/settings}">Settings</a>
                     </li>
+                    <li class="nav-item">
+                        <span class="fas fa_user fa-2x text-pink"></span>
+                    </li>
+                    <!-- Navbar dropdown-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                           sec:authentication="principal.fullname"></a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" id="logoutLink" href="">Logout</a>
+                        </div>
+                    </li>
 
                 </ul>
 
             </div>
         </nav>
     </div>
+    <!-- Footer -->
     <div class=" h-auto p-3 bg-secondary my-5" th:fragment="footer">
         <p class="text-end"> Kid Shop Control Panel - Copyright &copy; KidShop</p>
     </div>
-
 </body>
 </html>

@@ -52,7 +52,7 @@ table {
   mso-border-shadow: yes;
   background-color: #FFDBE3 !important; }
 
-input[type="text"], input[type="email"] {
+input[type="text"], input[type="email"], input[type="password"] {
   color: #8C92AC !important;
   font-size: 24px; }
 

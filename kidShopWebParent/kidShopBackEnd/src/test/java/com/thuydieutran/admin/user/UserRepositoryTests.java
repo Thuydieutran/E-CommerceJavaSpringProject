@@ -33,10 +33,10 @@ public class UserRepositoryTests {
     @Test
     public void testCreateUserTwoRoles() {
         Role roleEditor = new Role(3);
-        Role roleAssistant = new Role(5);
-        User userLily = new User("lily@gmail.com", "lilypass", "Lily", "Tran");
+        Role roleAdmin = new Role(1);
+        User userLily = new User("lila@gmail.com", "lilapass", "Lily", "Tran");
         userLily.addRole(roleEditor);
-        userLily.addRole(roleAssistant);
+        userLily.addRole(roleAdmin);
         User savedUser = userRepository.save(userLily);
         assertThat(savedUser.getId()).isGreaterThan(0);
     }

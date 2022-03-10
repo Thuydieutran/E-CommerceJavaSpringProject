@@ -30,7 +30,7 @@ public class User {
     private boolean enable;
 
     // In Role entity, there is no reference to User entity because this is unidirectional relationship - only from the user to role
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "users_roles",
             joinColumns = @JoinColumn(name = "user_id"),
@@ -135,5 +135,4 @@ public class User {
 
         return "/users-photos/" + this.id + "/" + this.photos;
     }
-
 }
