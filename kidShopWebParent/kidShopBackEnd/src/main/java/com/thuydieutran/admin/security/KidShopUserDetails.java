@@ -39,7 +39,7 @@ public class KidShopUserDetails implements UserDetails {
         return user.getEmail();
     }
 
-    public String getFullname() {
+    public String getName() {
         return this.user.getFirstname() + " " + this.user.getLastname();
     }
 
